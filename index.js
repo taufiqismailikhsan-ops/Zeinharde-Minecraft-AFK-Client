@@ -11,7 +11,7 @@ const readline = require('readline');
 const config = require('./config.json');
 
 // Centralized app name so all logs show the same client branding.
-const APP_NAME = config.client_name || "Zeinharde's AFK Client";
+const APP_NAME = config.client_name || "Shadow AFK Bot";
 
 // Readline interface to accept console input while the bot is running.
 // Anything you type into the terminal will be sent as an in-game chat message (e.g., /login password).
@@ -22,7 +22,7 @@ const rl = readline.createInterface({
 
 function createBot() {
     // Display connection target so it's obvious which server/port we're attempting to join.
-    console.log(`[${APP_NAME}][SYSTEM] Connecting to server: ${config.host}:${config.port}`);
+    console.log(`[${APP_NAME}][SYSTEM] Connecting: ${config.host}:${config.port}`);
 
     // Create the Mineflayer bot instance using values from config.json:
     // - host/port: server address
